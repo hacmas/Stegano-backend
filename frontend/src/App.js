@@ -34,7 +34,7 @@ function Home() {
     formData.append('password', password);
 
     try {
-      const response = await axios.post('http://127.0.0.1:5000/api/generate_link', formData);
+      const response = await axios.post('https://stegano-backend-xlxd.onrender.com/api/generate_link', formData);
       const link = `${window.location.origin}/secret/${response.data.id}`;
       setShareLink(link);
     } catch (error) {
@@ -111,7 +111,7 @@ function SecretView() {
     formData.append('password', password);
 
     try {
-      const response = await axios.post('http://127.0.0.1:5000/api/open_link', formData);
+      const response = await axios.post('https://stegano-backend-xlxd.onrender.com/api/open_link', formData);
       setDecodedText(response.data.secret_message);
     } catch (error) {
       if (error.response && error.response.data && error.response.data.error) {
@@ -133,7 +133,7 @@ function SecretView() {
       {/* --- THE SPY ENVELOPE: Show the image if it hasn't been decoded/destroyed yet --- */}
       {!decodedText && !imageError && (
         <img 
-          src={`http://127.0.0.1:5000/api/image/${id}`} 
+          src={`https://stegano-backend-xlxd.onrender.com/api/image/${id}`} 
           alt="Secure Envelope" 
           onError={() => setImageError(true)} // If Flask returns 404, hide the broken image icon
           style={{ width: '100%', borderRadius: '8px', marginBottom: '15px', border: '2px solid #6c5ce7' }}
