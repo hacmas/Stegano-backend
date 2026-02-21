@@ -1,0 +1,123 @@
+body {
+  background-color: #1e1e2f;
+  color: white;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  display: flex;
+  justify-content: center;
+  padding-top: 50px;
+}
+
+.container {
+  max-width: 600px;
+  width: 100%;
+  text-align: center;
+}
+
+.tabs {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.tabs button {
+  background: transparent;
+  color: #888;
+  border: 2px solid #888;
+  padding: 10px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.tabs button.active {
+  background: #6c5ce7;
+  color: white;
+  border-color: #6c5ce7;
+}
+
+.card, .result-card {
+  background: #2d2d44;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+input[type="file"] {
+  padding: 10px;
+  background: #1e1e2f;
+  border-radius: 6px;
+  color: white;
+}
+
+textarea {
+  height: 100px;
+  padding: 10px;
+  border-radius: 6px;
+  border: none;
+  background: #1e1e2f;
+  color: white;
+  resize: none;
+}
+
+button.action-btn, button.download-btn {
+  background: #00cec9;
+  color: #2d3436;
+  border: none;
+  padding: 15px;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+button.action-btn:hover { background: #01b1ad; }
+button:disabled { opacity: 0.5; cursor: not-allowed; }
+
+img {
+  max-width: 100%;
+  border-radius: 8px;
+}
+
+.secret-text {
+  background: #1e1e2f;
+  padding: 15px;
+  border-radius: 6px;
+  color: #00cec9;
+  font-family: monospace;
+  font-size: 18px;
+}
+
+/* Add this for the professional Error Box */
+.error-box {
+  background-color: rgba(255, 71, 87, 0.15); /* Light red background */
+  border-left: 4px solid #ff4757; /* Solid red line on the left */
+  color: #ff8a93; /* Soft red text */
+  padding: 12px 15px;
+  border-radius: 4px;
+  margin-bottom: 10px;
+  font-size: 15px;
+  text-align: left;
+  font-weight: 500;
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+/* Add this to clean up the password input styling */
+.password-input {
+  padding: 10px; 
+  border-radius: 6px; 
+  border: 2px solid #6c5ce7; 
+  background: #1e1e2f; 
+  color: white;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-5px); }
+  to { opacity: 1; transform: translateY(0); }
+}
